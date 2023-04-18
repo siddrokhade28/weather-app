@@ -36,7 +36,14 @@ function Inputs({setquery,setUnits,units}) {
             <input 
             type='text'
             value={city}
-            onChange={(e)=> setCity(e.currentTarget.value)}
+            onChange={(e)=> {setCity(e.currentTarget.value) }}
+            onKeyDown={(e)=> {
+              console.log("here here here ",e.key);
+              if (e.key === 'Enter') {
+                setCity(e.currentTarget.value)
+              }
+              handleLocationClick();
+            }}
             className='text-xl font-light p-2 w-full shadow-xl capitalize focus:outline-none placeholder:lowercase'
             placeholder='Enter City Name.....'
             />

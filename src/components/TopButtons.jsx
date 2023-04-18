@@ -4,7 +4,7 @@ function TopButtons( {setquery}) {
     const cities=[
         {
             id: 1,
-            title: 'India'
+            title: 'Delhi'
         },
         {
             id: 2,
